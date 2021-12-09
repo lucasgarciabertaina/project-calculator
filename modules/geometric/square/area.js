@@ -1,3 +1,3 @@
-module.exports = (squareSide) => {
+export default (squareSide) => {
   return squareSide * squareSide
 }
