@@ -1,15 +1,24 @@
 export default (numbers) => {
   let sortNumbers = numbers.sort();
   let moreTimes = [];
-  let array = []
-  let counter = 0
+  let counter = 1;
   for (let j = 0; j < sortNumbers.length; j++) {
     if (sortNumbers[j] == sortNumbers[j + 1]) {
       counter++
     } else {
       moreTimes.push(counter);
-      counter = 0
+      counter = 1
     }
   }
-  console.log(moreTimes)
+  counter = 1;
+  moreTimes.sort();
+  const max = moreTimes[moreTimes.length - 1];
+  for (let i = 0; i < sortNumbers.length; i++) {
+    if (sortNumbers[i] == sortNumbers[i + 1]) {
+      counter++;
+    }
+    if (counter === max) {
+      return sortNumbers[i];
+    }
+  }
 }

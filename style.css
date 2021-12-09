@@ -26,16 +26,25 @@ body{
   align-items: center;
 }
 .cell__display{
+  display: flex;
   grid-column: 1/13;
   padding: 5px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   border: 2px solid red;
-
+  justify-content: center;
 }
 .cell__display-text{
+  width: 90%;
+  border: none; 
   font-size: 5rem;
   font-weight: bolder;
+}
+.cell__display-text:active{
+  outline: none;
+}
+.cell__display-text:focus{
+  outline: none;
 }
 .cell{
   border: 2px solid red;
