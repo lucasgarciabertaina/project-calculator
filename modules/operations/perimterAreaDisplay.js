@@ -1,14 +1,21 @@
-export default (element) => {
+import areaOfFigure from "../areaOfFigure.js";
+import perimeterOfFigure from "../perimeterOfFigure.js";
+
+
+export default (geometricFigure) => {
   const circle = document.getElementById("circle");
-  circle.remove()
+  circle.remove();
 
-  // const square = document.getElementById("disc");
-  // square.setAttribute("id", "square");
-  // square.style.gridColumn = "1/5";
-  // square.innerHTML = "Square";
+  const perimeter = document.getElementById("square");
+  perimeter.setAttribute("id", "perimeter");
+  perimeter.style.gridColumn = "1/7";
+  perimeter.innerHTML = "Perimeter";
 
-  // const triangle = document.getElementById("me");
-  // triangle.setAttribute("id", "triangle");
-  // triangle.style.gridColumn = "9/13"
-  // triangle.innerHTML = "Triangle";
+  const area = document.getElementById("triangle");
+  area.setAttribute("id", "area");
+  area.style.gridColumn = "7/13"
+  area.innerHTML = "Area";
+
+  area.addEventListener('click', () => { areaOfFigure(geometricFigure) });
+  perimeter.addEventListener('click', () => { perimeterOfFigure(geometricFigure) });
 }

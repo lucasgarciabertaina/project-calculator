@@ -23,8 +23,8 @@ export default () => {
   triangle.style.gridColumn = "9/13"
   triangle.innerHTML = "Triangle";
 
-  const elements = { square, circle, triangle }
+  const elements = [square, circle, triangle]
   for (const element of elements) {
-    addEventListener("click", permieterArea(element))
+    element.addEventListener("click", () => { permieterArea(element.getAttribute("id")) });
   }
 }
